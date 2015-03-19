@@ -33,5 +33,15 @@ namespace WebTestProto.Framework
         {
             webDriver.Quit();
         }
+
+        public static string Title
+        {
+            get { return webDriver.Title; }
+        }
+
+        public static void MaximizeWindow()
+        {
+            webDriver.Manage().Window.Maximize();
+        }
     }
 }

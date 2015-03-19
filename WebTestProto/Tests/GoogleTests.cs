@@ -8,12 +8,14 @@ namespace WebTestProto.Tests
     [TestClass]
     public class GoogleTests
     {
-        [TestMethod]
-        public void TestMethod1()
+        [TestMethod]        
+        public void OpenCloseBrowserTest()
         {
             Browser.SetDriver();
             Browser.Goto("http://www.google.com");
             Pages.GooglePage.EnterSearchText("testing");
+            Browser.Quit();
+            Assert.AreEqual("x", "x");
         }
     }
 }
